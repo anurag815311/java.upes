@@ -63,7 +63,7 @@ class ShapeAreaCalculator {
 public class Shapes {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in);
         ShapeAreaCalculator calculator = new ShapeAreaCalculator();
         int choice;
 
@@ -75,35 +75,35 @@ public class Shapes {
             System.out.println("3. Triangle");
             System.out.println("4. Exit");
             System.out.print("Enter choice: ");
-            choice = scanner.nextInt();
+            choice = sc.nextInt();
 
             // Handle user input
             switch (choice) {
                 case 1: // Circle
                     System.out.print("Enter the radius: ");
-                    double radius = scanner.nextDouble();
+                    double radius = sc.nextDouble();
                     calculator.calculateArea(new Circle(radius));
                     break;
 
                 case 2: // Rectangle
                     System.out.print("Enter the length: ");
-                    double length = scanner.nextDouble();
+                    double length = sc.nextDouble();
                     System.out.print("Enter the width: ");
-                    double width = scanner.nextDouble();
+                    double width = sc.nextDouble();
                     calculator.calculateArea(new Rectangle(length, width));
                     break;
 
                 case 3: // Triangle
                     System.out.print("Enter the base: ");
-                    double base = scanner.nextDouble();
+                    double base = sc.nextDouble();
                     System.out.print("Enter the height: ");
-                    double height = scanner.nextDouble();
+                    double height = sc.nextDouble();
                     calculator.calculateArea(new Triangle(base, height));
                     break;
 
                 case 4: // Exit
                     System.out.println("Goodbye!");
-                    scanner.close();
+                    sc.close();
                     return;
 
                 default: // Invalid choice
