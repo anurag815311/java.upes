@@ -1,3 +1,7 @@
+/*Write a Java program that takes two 4×4 matrices (2D-array), say A and B as
+input from the user. Then compute and print the matrix products AB and BA.
+Verify whether AB = BA (in general). */
+
 import java.util.Scanner;
 
 public class matrixMul {
