@@ -64,7 +64,7 @@ public class Shapes {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        ShapeAreaCalculator calculator = new ShapeAreaCalculator();
+        ShapeAreaCalculator calc = new ShapeAreaCalculator();
         int choice;
 
         while (true) {
@@ -82,7 +82,7 @@ public class Shapes {
                 case 1: // Circle
                     System.out.print("Enter the radius: ");
                     double radius = sc.nextDouble();
-                    calculator.calculateArea(new Circle(radius));
+                    calc.calculateArea(new Circle(radius));
                     break;
 
                 case 2: // Rectangle
@@ -90,7 +90,7 @@ public class Shapes {
                     double length = sc.nextDouble();
                     System.out.print("Enter the width: ");
                     double width = sc.nextDouble();
-                    calculator.calculateArea(new Rectangle(length, width));
+                    calc.calculateArea(new Rectangle(length, width));
                     break;
 
                 case 3: // Triangle
@@ -98,7 +98,7 @@ public class Shapes {
                     double base = sc.nextDouble();
                     System.out.print("Enter the height: ");
                     double height = sc.nextDouble();
-                    calculator.calculateArea(new Triangle(base, height));
+                    calc.calculateArea(new Triangle(base, height));
                     break;
 
                 case 4: // Exit
