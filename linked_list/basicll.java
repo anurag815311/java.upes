@@ -27,6 +27,24 @@ public class basicll {
 
     }
 
+    public static void displayreverse(Node head) {
+        if (head == null) {
+            return;
+        }
+        displayreverse(head.next);
+        System.out.print(head.data + " ");
+
+    }
+
+    public static int length(Node head) {
+        int len = 0;
+        while (head != null) {
+            len++;
+            head = head.next;
+        }
+        return len;
+    }
+
     public static void main(String[] args) {
         Node a = new Node(10);
         Node b = new Node(20);
@@ -40,6 +58,10 @@ public class basicll {
         Display(a);
         System.out.println();
         DisplayR(a);
+        System.out.println();
+        displayreverse(a);
+        System.out.println();
+        System.out.println("The length of linked list :" + length(a));
     }
 
 }
