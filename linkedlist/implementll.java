@@ -13,7 +13,7 @@ class node {
 class linkedList {
     node head;
 
-    void insert(int data, int pos) {
+    void insert(int data, int pos) { // insert at begining and any other position
         node new_node = new node(data);
         if (pos == 0) {
             head = new_node;
