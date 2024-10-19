@@ -1,4 +1,3 @@
-package linked_list;
 
 public class basicll {
     public static class Node {
@@ -27,22 +26,22 @@ public class basicll {
 
     }
 
-    public static void displayreverse(Node head) {
+    public static void DisplayRev(Node head) {
         if (head == null) {
             return;
         }
-        displayreverse(head.next);
+        DisplayRev(head);
         System.out.print(head.data + " ");
 
     }
 
-    public static int length(Node head) {
-        int len = 0;
+    public static int len(Node head) {
+        int count = 0;
         while (head != null) {
-            len++;
+            count++;
             head = head.next;
         }
-        return len;
+        return count;
     }
 
     public static void main(String[] args) {
@@ -58,10 +57,6 @@ public class basicll {
         Display(a);
         System.out.println();
         DisplayR(a);
-        System.out.println();
-        displayreverse(a);
-        System.out.println();
-        System.out.println("The length of linked list :" + length(a));
     }
 
 }
