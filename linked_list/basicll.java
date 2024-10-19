@@ -18,6 +18,15 @@ public class basicll {
         }
     }
 
+    public static void DisplayR(Node head) {
+        if (head == null) {
+            return;
+        }
+        System.out.print(head.data + " ");
+        DisplayR(head.next);
+
+    }
+
     public static void main(String[] args) {
         Node a = new Node(10);
         Node b = new Node(20);
@@ -29,6 +38,8 @@ public class basicll {
         c.next = d;
         d.next = e;
         Display(a);
+        System.out.println();
+        DisplayR(a);
     }
 
 }
