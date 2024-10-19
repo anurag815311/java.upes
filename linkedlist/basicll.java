@@ -45,7 +45,33 @@ public class basicll {
         return count;
     }
 
+    void insert(Node head, int pos, int data) {
+        Node newNode = new Node(data);
+        Node temp = head;
+        if (pos == 0) {
+            newNode.next = temp;
+            head = newNode;
+        } else {
+            for (int i = 0; i < pos - 1; i++) {
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+
+        }
+    }
+
+    void insert_at_end(Node head, int data) {
+        Node newNode = new Node(data);
+        Node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = newNode;
+    }
+
     public static void main(String[] args) {
+        basicll ob = new basicll();
         Node a = new Node(10);
         Node b = new Node(20);
         Node c = new Node(30);
@@ -55,9 +81,12 @@ public class basicll {
         b.next = c;
         c.next = d;
         d.next = e;
+        // Display(a);
+        // System.out.println();
+        // DisplayR(a);
+        ob.insert(a, 3, 34);
+        ob.insert_at_end(a, 21);
         Display(a);
-        System.out.println();
-        DisplayR(a);
     }
 
 }
