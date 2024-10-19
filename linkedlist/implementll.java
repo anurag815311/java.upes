@@ -50,6 +50,40 @@ class linkedList {
         }
     }
 
+    int delete(int pos) {
+        int x = -1;
+        node temp = head;
+        if (pos == 0) {
+            if (head == null) {
+                System.out.println("List is empty");
+            } else {
+                x = temp.data;
+                head = temp.next;
+            }
+        } else {
+            for (int i = 0; i < pos - 1; i++) {
+                temp = temp.next;
+            }
+            x = temp.data;
+            temp.next = temp.next.next;
+        }
+
+        return x;
+    }
+
+    int delete_end() {
+        int x = -1;
+        node prev = null;
+        node temp = head;
+        while (temp.next != null) {
+            prev = temp;
+            temp = temp.next;
+        }
+        x = temp.data;
+        prev.next = temp.next;
+        return x;
+    }
+
 }
 
 public class implementll {
@@ -59,6 +93,9 @@ public class implementll {
         ob.insert(4, 1);
         ob.insert(6, 2);
         ob.insert_at_end(23);
+        ob.display();
+        // ob.delete(0);
+        ob.delete_end();
         ob.display();
 
     }
