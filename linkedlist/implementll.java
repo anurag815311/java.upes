@@ -27,6 +27,16 @@ class linkedList {
         }
     }
 
+    void insert_at_end(int data) {
+        node new_node = new node(data);
+        node temp = head;
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        temp.next = new_node;
+
+    }
+
     void display() {
         if (head == null) {
             System.out.println("List is empty");
@@ -46,7 +56,11 @@ public class implementll {
     public static void main(String[] args) {
         linkedList ob = new linkedList();
         ob.insert(2, 0);
+        ob.insert(4, 1);
+        ob.insert(6, 2);
+        ob.insert_at_end(23);
         ob.display();
+
     }
 
 }
