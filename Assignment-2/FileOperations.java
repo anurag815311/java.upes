@@ -1,3 +1,5 @@
+
+//question 2 solution
 import java.io.*;
 import java.util.*;
 
